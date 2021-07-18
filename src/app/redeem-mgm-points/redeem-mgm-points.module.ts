@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { RedeemMgmPointsPageRoutingModule } from './redeem-mgm-points-routing.module';
 
 import { RedeemMgmPointsPage } from './redeem-mgm-points.page';
+import { SharedModule } from '../modules/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RedeemMgmPointsPageRoutingModule
+    RedeemMgmPointsPageRoutingModule,
+    SharedModule
   ],
   declarations: [RedeemMgmPointsPage]
 })

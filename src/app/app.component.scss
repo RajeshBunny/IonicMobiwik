@@ -2,6 +2,19 @@ ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }
 
+ion-menu {
+  width: 100px;
+  --ion-background-color: #002447;
+  --ion-text-color: var(--ion-color-primary-contrast);
+
+  ion-toolbar {
+    --background: var(--ion-color-primary);
+  }
+
+  ion-list {/* optional, but it needs when you use gradient as a background color.*/
+    background: transparent;
+  }
+}
 ion-menu.md ion-content {
   --padding-start: 8px;
   --padding-end: 8px;
@@ -33,24 +46,31 @@ ion-menu.md ion-list#inbox-list ion-list-header {
   min-height: 20px;
 }
 
+ion-item {
+  --min-height: 16px;
+}
+
 ion-menu.md ion-list#labels-list ion-list-header {
   font-size: 16px;
 
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 
   color: #757575;
 
-  min-height: 26px;
+  min-height: 20px;
 }
 
 ion-menu.md ion-item {
   --padding-start: 10px;
   --padding-end: 10px;
   border-radius: 4px;
+  --min-height : 16px;
 }
 
 ion-menu.md ion-item.selected {
-  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+  color: white;
+  --background:#1a3a59;
+  border-radius: 4px;
 }
 
 ion-menu.md ion-item.selected ion-icon {
@@ -63,6 +83,7 @@ ion-menu.md ion-item ion-icon {
 
 ion-menu.md ion-item ion-label {
   font-weight: 500;
+  font-size: 13px;
 }
 
 ion-menu.ios ion-content {
@@ -116,4 +137,20 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
+}
+
+ion-content {
+  // overwrite inline styles
+  --offset-bottom: auto!important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+ion-header.globalHeader{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
 }

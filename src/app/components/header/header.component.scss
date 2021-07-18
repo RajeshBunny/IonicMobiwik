@@ -1,0 +1,36 @@
+ion-header{
+    z-index: 3;
+    top: 0;
+    background: #fff;
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    font-size: 13px;
+    justify-content: flex-end;
+}
+
+
+ion-header.hdrContainer.hdrRgt.usrCntrol > span {
+    display: flex;
+}
+
+.colsep.cright {
+    border-right: 1px solid #ebebeb;
+}
+.colsep {
+    height: 100%;
+    border-width: 0;
+}
+
+.spright15 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+a, button:focus, input, input:focus, label:focus, li:focus, p:focus, select:focus, textarea:focus, ul:focus {
+    outline: 0;
+}
+a {
+    text-decoration: none;
+    color: #0073cf;
+}
