@@ -1,6 +1,6 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu class="appMainmenu" contentId="main-content" type="overlay">
+    <ion-menu class="appMainmenu" contentId="content1" side="start">
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>mobikwik
@@ -17,7 +17,8 @@
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
               <!-- <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon> -->
-              <ion-icon [name]="p.icon"></ion-icon>
+              <!-- <ion-icon [name]="p.icon"></ion-icon> -->
+              <img style="width: 25px; height: 25px;" [src]="p.image">
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
