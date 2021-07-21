@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 import { AppComponent } from 'src/app/app.component';
 
 @Component({
@@ -7,12 +8,12 @@ import { AppComponent } from 'src/app/app.component';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @ViewChild(AppComponent) _sideMenu: any;
-  constructor() { }
+  @ViewChild(AppComponent) sideMenu: any;
+  constructor(public menuCtrl: MenuController) { }
 
   ngOnInit() {}
-  
+
   toggleSidenav(){
-    this._sideMenu.toggleMenu();
+    this.menuCtrl.toggle();
   }
 }

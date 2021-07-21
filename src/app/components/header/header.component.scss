@@ -38,3 +38,13 @@ a {
 ion-header.ion-header{
     display: flex;
 }
+ion-icon.menu-icon{
+    font-size: 20px; //Preferred size here
+    --background: #1a3a59;
+    color: #1a3a59;
+}
+
+:host .menu-icon {
+    stroke: currentcolor;
+    color: #1a3a59;
+}
