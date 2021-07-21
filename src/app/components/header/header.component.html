@@ -1,6 +1,13 @@
 <ion-header>
   <ion-toolbar>
-  <section class="usrCntrol">
+  
+	<ion-buttons>
+   <ion-menu-toggle menuToggle>
+        <ion-icon (click)="toggleSidenav()" name="menu"></ion-icon>
+     </ion-menu-toggle>
+	</ion-buttons>
+      <ion-buttons slot="secondary">
+         <section class="usrCntrol">
     <span><!---->
       <a class="colsep cright spright15 m_spright7 ">What we do?</a><!---->
       <a class="d_hlp spleft15 colsep cright spright15" routerlink="/help" href="/help">Help?</a>
@@ -12,5 +19,6 @@
     <span class=""><a class="mg mg_icomenu mnuicon gradbg7_bf " tabindex="-1"></a>
     </span
     ></section>
+    </ion-buttons>
   </ion-toolbar>
-  </ion-header>
+</ion-header>

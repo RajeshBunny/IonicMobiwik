@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -17,5 +18,15 @@ export class AppComponent {
 
   ];
   public labels = ['Mutual Funds', 'Insurance', 'E-Gold', 'Express Fixed Deposit', 'Axis Plus Credit Card', 'Accepet Payments'];
-  constructor() {}
+  constructor(public menuCtrl: MenuController) {
+    //this.initializeApp();
+  }
+
+  enableAuthenticatedMenu() {
+    this.menuCtrl.enable(true, 'authenticated');
+    this.menuCtrl.enable(false, 'unauthenticated');
+  } 
+  toggleMenu() {
+    this.menuCtrl.toggle(); //Add this method to your button click function
+  }
 }

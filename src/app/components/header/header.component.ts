@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
+  @ViewChild(AppComponent) _sideMenu: any;
   constructor() { }
 
   ngOnInit() {}
-
+  
+  toggleSidenav(){
+    this._sideMenu.toggleMenu();
+  }
 }

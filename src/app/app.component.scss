@@ -3,7 +3,7 @@ ion-menu ion-content {
 }
 
 ion-menu {
-  width: 100px;
+  width: 240px;
   --ion-background-color: #002447;
   --ion-text-color: var(--ion-color-primary-contrast);
 
@@ -151,6 +151,6 @@ ion-content {
 
 ion-header.globalHeader{
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   padding-right: 30px;
 }
